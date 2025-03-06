@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="projet&#227;o"/>
+        <attribute name="authors" value="luan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-06 08:52:51 "/>
+        <attribute name="created" value="bHVhbjtERVNLVE9QLUNNQ0tSRDE7MjAyNS0wMy0wMTsiMTA6NDU6MzggIjsyNjg5"/>
+        <attribute name="edited" value="bHVhbjtERVNLVE9QLUNNQ0tSRDE7MjAyNS0wMy0wMzsiMDY6MjE6NDEgIjszMTsyODQz"/>
+        <attribute name="edited" value="THVhbjtERVNLVE9QLTJMQVJWMVI7MjAyNS0wMy0wNjsiMDg6NTI6NTEgIjszOzI3Nzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="escolhamenu" type="Integer" array="False" size=""/>
+            <declare name="option, pontuacao" type="Integer" array="False" size=""/>
+            <output expression="&quot;As escolhas importam&quot;" newline="True"/>
+            <output expression="&quot;Escolha o n&#250;mero correspondente para acessar a op&#231;&#227;o&quot;" newline="True"/>
+            <do expression="option==0">
+                <do expression="escolhamenu==0">
+                    <assign variable="escolhamenu" expression="0"/>
+                    <output expression="&quot;              (1) - Perguntas e respostas&quot; &amp; ToChar(13)&amp;&#13;&#10;&quot;(2) - Acerte a caixa&quot; &amp; ToChar(13) &amp; &#13;&#10;&quot;(3) - Gousmas war&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot; (4) - Sair do (titulo)&quot;" newline="True"/>
+                    <input variable="escolhamenu"/>
+                    <if expression="escolhamenu==1">
+                        <then>
+                            <assign variable="escolhamenu" expression="1"/>
+                        </then>
+                        <else>
+                            <if expression="escolhamenu==2">
+                                <then>
+                                    <assign variable="escolhamenu" expression="2"/>
+                                </then>
+                                <else>
+                                    <if expression="escolhamenu==3">
+                                        <then>
+                                            <assign variable="escolhamenu" expression="3"/>
+                                        </then>
+                                        <else>
+                                            <if expression="escolhamenu==4">
+                                                <then>
+                                                    <assign variable="escolhamenu" expression="4"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="escolhamenu" expression="0"/>
+                                                    <output expression="&quot;Op&#231;&#227;o escolhida n&#227;o existente, por favor, esolha uma das op&#231;&#245;es&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </do>
+                <if expression="escolhamenu==1">
+                    <then>
+                        <assign variable="escolhamenu" expression="0"/>
+                        <output expression="&quot;Voc&#234; selecionou: Perguntas e Respostas!&quot;" newline="True"/>
+                        <output expression="&quot;Nesse jogo voc&#234; deve escolher as respostas certas, ao final ganhar&#225; uma avali&#231;&#227;o conforme seu desempenho.&quot;" newline="True"/>
+                        <do expression="option==1">
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;1&#176;)Quanto &#233; 10x30?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - 250&quot; &amp; ToChar(13) &amp;  &quot;(2) - 300&quot; &amp; ToChar(13) &amp; &quot;(3) - 900&quot; &amp; ToChar(13)&amp; &quot;(4) - 789&quot; &amp; ToChar(13) &amp; &quot;(5) - 167&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <assign variable="pontuacao" expression="0"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==2">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Certa resposta!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Resposta errada :(&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (2) - 300&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;2&#176;)Quem pintou a famosa obra 'Mona Lisa'?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - Vincent van Gogh&quot; &amp; ToChar(13) &amp;  &quot;(2) - Pablo Picasso&quot; &amp; ToChar(13) &amp; &quot;(3) - Claude Monet&quot; &amp; ToChar(13)&amp; &quot;(4) - Leonardo da Vinci&quot; &amp; ToChar(13) &amp; &quot;(5) - Tarsila do Amaral&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==4">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Correto!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Incorreto!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (4) - Leonardo da Vinci&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;3&#176;)Qual a f&#243;rmula molecular da &#225;gua?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - NaCl&quot; &amp; ToChar(13) &amp;  &quot;(2) - O2&quot; &amp; ToChar(13) &amp; &quot;(3) - H3SO4&quot; &amp; ToChar(13)&amp; &quot;(4) - CO2&quot; &amp; ToChar(13) &amp; &quot;(5) - H2O&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==5">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Muito bem&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;N&#227;o foi dessa vez.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (5) - H2O&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;4&#176;)Kryptonita &#233; a fraqueza de qual super-her&#243;i?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - Super-man&quot; &amp; ToChar(13) &amp;  &quot;(2) - Hulk&quot; &amp; ToChar(13) &amp; &quot;(3) - Batman&quot; &amp; ToChar(13)&amp; &quot;(4) - Flash&quot; &amp; ToChar(13) &amp; &quot;(5) - Homem de ferro&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==1">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Certo!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Errado!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (1) - Super-man&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;5&#176;)Qual o nome popularmente usado do cloreto de s&#243;dio?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - &#193;gua&quot; &amp; ToChar(13) &amp;  &quot;(2) - Vinagre&quot; &amp; ToChar(13) &amp; &quot;(3) - Sal de cozinha&quot; &amp; ToChar(13)&amp; &quot;(4) - Fermento&quot; &amp; ToChar(13) &amp; &quot;(5) - Papel&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==3">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Na mosca!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Foi por pouco!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (3) - Sal de cozinha&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;6&#176;)Em que pa&#237;s foi constru&#237;do o muro de Berlim?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - Brasil&quot; &amp; ToChar(13) &amp;  &quot;(2) - Estados Unidos&quot; &amp; ToChar(13) &amp; &quot;(3) - China&quot; &amp; ToChar(13)&amp; &quot;(4) - Coreia do Norte&quot; &amp; ToChar(13) &amp; &quot;(5) - Alemanha&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==5">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Perfeito!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Passou longe!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (5) - Alemanha&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;7&#176;)Que fruto nasce da oliveira?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - Azeitona&quot; &amp; ToChar(13) &amp;  &quot;(2) - Abacate&quot; &amp; ToChar(13) &amp; &quot;(3) - A&#231;a&#237;&quot; &amp; ToChar(13)&amp; &quot;(4) - Acerola&quot; &amp; ToChar(13) &amp; &quot;(5) - Am&#234;ndoa&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==1">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Right!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Wrong!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (1) - Azeitona&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;8&#176;)Quem foi o primeiro humano a viajar ao espa&#231;o?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - Thomas Stafford&quot; &amp; ToChar(13) &amp;  &quot;(2) - Neil Armstrong&quot; &amp; ToChar(13) &amp; &quot;(3) - Valentina Tereshkova&quot; &amp; ToChar(13)&amp; &quot;(4) - Yuri Gagarin&quot; &amp; ToChar(13) &amp; &quot;(5) - Sally Ride&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==4">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Certinho!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Que deslize!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (4) - Yuri Gagarin&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;9&#176;)Quem &#233; o autor de 'O Pr&#237;ncipe'?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - Montesquieu&quot; &amp; ToChar(13) &amp;  &quot;(2) - Maquiavel&quot; &amp; ToChar(13) &amp; &quot;(3) - Thomas Hobbes&quot; &amp; ToChar(13)&amp; &quot;(4) - Rousseau&quot; &amp; ToChar(13) &amp; &quot;(5) - Antoine de Saint&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==2">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Verdade!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Falso!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (2) - Maquiavel&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;10&#176;)Qual a montanha mais alta do mundo?&quot;" newline="True"/>
+                                <output expression="&quot;(1) - Monte Everest&quot; &amp; ToChar(13) &amp;  &quot;(2) - Mauna Kea&quot; &amp; ToChar(13) &amp; &quot;(3) - Dhaulagiri&quot; &amp; ToChar(13)&amp; &quot;(4) - Pico da Neblina&quot; &amp; ToChar(13) &amp; &quot;(5) - Monte Chimborazo&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then/>
+                                    <else>
+                                        <if expression="option==1">
+                                            <then>
+                                                <assign variable="pontuacao" expression="pontuacao+1"/>
+                                                <output expression="&quot;Certa resposta!&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Que pena, voc&#234; errou!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp;&#13;&#10;&quot;Alternativa certa: (1) - Monte Everest&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <if expression="option&lt;1 || option&gt;5">
+                                    <then>
+                                        <output expression="&quot;Aten&#231;&#227;o! escolha apenas um dos n&#250;meros correspondentes.&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                            <assign variable="option" expression="2"/>
+                            <if expression="pontuacao&lt;=1">
+                                <then>
+                                    <output expression="&quot;Eita, voc&#234; acertou &quot; &amp; pontuacao &amp; &quot;/10&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="pontuacao&lt;=3">
+                                        <then>
+                                            <output expression="&quot;Da pra melhorar, voc&#234; acertou &quot; &amp; pontuacao &amp; &quot;/10&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="pontuacao&lt;=5">
+                                                <then>
+                                                    <output expression="&quot;ta na m&#233;dia, voc&#234; acertou &quot; &amp; pontuacao &amp; &quot;/10&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="pontuacao&lt;=7">
+                                                        <then>
+                                                            <output expression="&quot;BOA!, voc&#234; acertou &quot; &amp; pontuacao &amp; &quot;/10&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="pontuacao&lt;=9">
+                                                                <then>
+                                                                    <output expression="&quot;INCR&#205;VEL!, voc&#234; acertou &quot; &amp; pontuacao &amp; &quot;/10&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;LITERALMENTE PERFEITO!, voc&#234; acertou &quot; &amp; pontuacao &amp; &quot;/10&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <output expression="&quot;Muito obrigado por jogar Perguntas e Respostas!&quot; &amp; ToChar(13) &amp; &quot;Selecione uma das op&#231;&#245;es abaixo&quot;" newline="True"/>
+                            <do expression="option&lt;0 || option&gt;1">
+                                <output expression="&quot;(1) - Repetir o jogo&quot; &amp; ToChar(13) &amp; &quot;(0) - Voltar para o menu&quot;" newline="True"/>
+                                <input variable="option"/>
+                                <if expression="option&lt;0 || option&gt;1">
+                                    <then>
+                                        <output expression="&quot;Escolha apenas um dos n&#250;meros correspondentes&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </do>
+                        </do>
+                        <assign variable="option" expression="0"/>
+                    </then>
+                    <else>
+                        <if expression="escolhamenu==2">
+                            <then>
+                                <assign variable="escolhamenu" expression="0"/>
+                                <do expression="escolhamenu==1"/>
+                            </then>
+                            <else>
+                                <if expression="escolhamenu==3">
+                                    <then>
+                                        <assign variable="escolhamenu" expression="0"/>
+                                        <do expression="escolhamenu==1"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Obrigado por jogar&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

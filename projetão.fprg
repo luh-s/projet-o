@@ -4,12 +4,12 @@
         <attribute name="name" value="projet&#227;o"/>
         <attribute name="authors" value="luan"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-03-26 10:41:13 "/>
+        <attribute name="saved" value="2025-03-26 10:55:13 "/>
         <attribute name="created" value="bHVhbjtERVNLVE9QLUNNQ0tSRDE7MjAyNS0wMy0wMTsiMTA6NDU6MzggIjsyNjg5"/>
         <attribute name="edited" value="bHVhbjtERVNLVE9QLUNNQ0tSRDE7MjAyNS0wMy0wMzsiMDY6MjE6NDEgIjszMTsyODQz"/>
         <attribute name="edited" value="THVhbjtERVNLVE9QLTJMQVJWMVI7MjAyNS0wMy0wNjsiMDc6NTc6MzggIjs1OzI3ODg="/>
         <attribute name="edited" value="THVhbjtMVUhTLVBDOzIwMjUtMDMtMTY7IjA5OjExOjIzICI7ODsyMjEz"/>
-        <attribute name="edited" value="bHVhbno7TFVIUy1QQzsyMDI1LTAzLTI2OyIxMDo0MToxMyAiOzE1OzI0MDg="/>
+        <attribute name="edited" value="bHVhbno7TFVIUy1QQzsyMDI1LTAzLTI2OyIxMDo1NToxMyAiOzE2OzI0MTQ="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -599,11 +599,11 @@
                                             <assign variable="blockch4" expression="0"/>
                                             <assign variable="blockatk4" expression="0"/>
                                             <do expression="option==1">
-                                                <output expression="&quot;N&#205;VEIS DE FURIA&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Gousma 1: &quot; &amp; gp1x &amp; ToChar(13) &amp; &quot;Gousma 2: &quot; &amp; gp1y &amp; ToChar(13) &amp; &quot;Gousma 3: &quot; &amp; gp2x &amp; ToChar(13) &amp; &quot;Gousma 4: &quot; &amp; gp2y" newline="True"/>
+                                                <output expression="&quot;N&#205;VEIS DE FURIA&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Gousma Gerfeson: &quot; &amp; gp1x &amp; ToChar(13) &amp; &quot;Gousma Hugo: &quot; &amp; gp1y &amp; ToChar(13) &amp; &quot;Gousma Pelucio: &quot; &amp; gp2x &amp; ToChar(13) &amp; &quot;Gousma Leopondo: &quot; &amp; gp2y" newline="True"/>
                                                 <if expression="alternar1==1">
                                                     <then>
                                                         <do expression="option&lt;1 || option&gt;2 || option==blockch || option==blockch2">
-                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja USAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(1) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(2) - Gousma y&quot;" newline="True"/>
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja USAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(1) - Gousma Gerfeson&quot; &amp; ToChar(13) &amp; &quot;(2) - Gousma Hugo&quot;" newline="True"/>
                                                             <input variable="option"/>
                                                             <if expression="option&lt;1 || option&gt;2 || option==blockch || option==blockch2">
                                                                 <then>
@@ -622,7 +622,7 @@
                                                     </then>
                                                     <else>
                                                         <do expression="option&lt;3 || option&gt;4 || option==blockch3 || option==blockch4">
-                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja USAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(3) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(4) - Gousma y&quot;" newline="True"/>
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja USAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(3) - Gousma Pelucio&quot; &amp; ToChar(13) &amp; &quot;(4) - Gousma Leopondo&quot;" newline="True"/>
                                                             <input variable="option"/>
                                                             <if expression="option&lt;3 || option&gt;4 || option==blockch3 || option==blockch4">
                                                                 <then>
@@ -643,7 +643,7 @@
                                                 <if expression="alternar1==1">
                                                     <then>
                                                         <do expression="option1&lt;3 || option1&gt;4 || option1==blockatk3 || option1==blockatk4">
-                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja ATACAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(3) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(4) - Gousma y&quot;" newline="True"/>
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja ATACAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(3) - Gousma Pelucio&quot; &amp; ToChar(13) &amp; &quot;(4) - Gousma Leopondo&quot;" newline="True"/>
                                                             <input variable="option1"/>
                                                             <if expression="option1&lt;3 || option1&gt;4 || option1==blockatk3 || option1==blockatk4">
                                                                 <then>
@@ -662,7 +662,7 @@
                                                     </then>
                                                     <else>
                                                         <do expression="option1&lt;1 || option1&gt;2 || option1==blockatk || option1==blockatk2">
-                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja ATACAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(1) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(2) - Gousma y&quot;" newline="True"/>
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja ATACAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(1) - Gousma Gerfeson&quot; &amp; ToChar(13) &amp; &quot;(2) - Gousma Hugo&quot;" newline="True"/>
                                                             <input variable="option1"/>
                                                             <if expression="option1&lt;1 || option1&gt;2 || option1==blockatk || option1==blockatk2">
                                                                 <then>
@@ -736,20 +736,20 @@
                                                     <then>
                                                         <if expression="gp1y&gt;5 || gp1y==0">
                                                             <then>
-                                                                <output expression="&quot;Gousma 2 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <output expression="&quot;Gousma Hugo est&#225; fora de jogo!&quot;" newline="True"/>
                                                                 <assign variable="blockch2" expression="2"/>
                                                                 <assign variable="blockatk2" expression="2"/>
                                                                 <assign variable="gp1y" expression="0"/>
                                                                 <if expression="gp1x&gt;5 || gp1x==0">
                                                                     <then>
-                                                                        <output expression="&quot;Gousma 1 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        <output expression="&quot;Gousma Gerfeson est&#225; fora de jogo!&quot;" newline="True"/>
                                                                         <assign variable="blockch" expression="1"/>
                                                                         <assign variable="blockatk" expression="1"/>
                                                                         <assign variable="gp1x" expression="0"/>
                                                                     </then>
                                                                     <else>
                                                                         <do expression="option&lt;0 || option&gt;1">
-                                                                            <output expression="&quot;jogador 1, sua Gousma 2 est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma 1 com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
+                                                                            <output expression="&quot;jogador 1, sua Gousma Hugo est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma Gerfeson com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
                                                                             <input variable="option"/>
                                                                             <if expression="option&lt;0 || option&gt;1">
                                                                                 <then>
@@ -761,7 +761,7 @@
                                                                         <if expression="option==1">
                                                                             <then>
                                                                                 <do expression="option&gt;gp1x || option&lt;1">
-                                                                                    <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 1: &quot; &amp; gp1x" newline="True"/>
+                                                                                    <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma Gerfeson: &quot; &amp; gp1x" newline="True"/>
                                                                                     <input variable="option"/>
                                                                                     <if expression="option&gt;gp1x || option&lt;1">
                                                                                         <then>
@@ -774,12 +774,12 @@
                                                                                 <assign variable="gp1y" expression="gp1y+option"/>
                                                                                 <if expression="gp1y&gt;0">
                                                                                     <then>
-                                                                                        <output expression="&quot;A Gousma 2 voltou para a batalha!&quot;" newline="True"/>
+                                                                                        <output expression="&quot;A Gousma Hugo voltou para a batalha!&quot;" newline="True"/>
                                                                                         <assign variable="blockch2" expression="10"/>
                                                                                         <assign variable="blockatk2" expression="10"/>
                                                                                         <if expression="gp1x&lt;=0">
                                                                                             <then>
-                                                                                                <output expression="&quot;A Gousma 1 se sacrificou!&quot;" newline="True"/>
+                                                                                                <output expression="&quot;A Gousma Gerfeson se sacrificou!&quot;" newline="True"/>
                                                                                                 <assign variable="blockch" expression="1"/>
                                                                                                 <assign variable="blockatk" expression="1"/>
                                                                                                 <assign variable="gp1x" expression="0"/>
@@ -796,12 +796,12 @@
                                                                 </if>
                                                             </then>
                                                             <else>
-                                                                <output expression="&quot;Gousma 1 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <output expression="&quot;Gousma Gerfeson est&#225; fora de jogo!&quot;" newline="True"/>
                                                                 <assign variable="blockch" expression="1"/>
                                                                 <assign variable="blockatk" expression="1"/>
                                                                 <assign variable="gp1x" expression="0"/>
                                                                 <do expression="option&lt;0 || option&gt;1">
-                                                                    <output expression="&quot;jogador 1, sua Gousma 1 est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma 2 com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
+                                                                    <output expression="&quot;jogador 1, sua Gousma Gerfeson est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma Hugo com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
                                                                     <input variable="option"/>
                                                                     <if expression="option&lt;0 || option&gt;1">
                                                                         <then>
@@ -813,7 +813,7 @@
                                                                 <if expression="option==1">
                                                                     <then>
                                                                         <do expression="option&gt;gp1y || option&lt;1">
-                                                                            <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 2: &quot; &amp; gp1y" newline="True"/>
+                                                                            <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma Hugo: &quot; &amp; gp1y" newline="True"/>
                                                                             <input variable="option"/>
                                                                             <if expression="option&gt;gp1y || option&lt;1">
                                                                                 <then>
@@ -826,12 +826,12 @@
                                                                         <assign variable="gp1x" expression="gp1x+option"/>
                                                                         <if expression="gp1x&gt;0">
                                                                             <then>
-                                                                                <output expression="&quot;A Gousma 1 voltou para a batalha!&quot;" newline="True"/>
+                                                                                <output expression="&quot;A Gousma Gerfeson voltou para a batalha!&quot;" newline="True"/>
                                                                                 <assign variable="blockch" expression="10"/>
                                                                                 <assign variable="blockatk" expression="10"/>
                                                                                 <if expression="gp1y&lt;=0">
                                                                                     <then>
-                                                                                        <output expression="&quot;A Gousma 2 se sacrificou!&quot;" newline="True"/>
+                                                                                        <output expression="&quot;A Gousma Hugo se sacrificou!&quot;" newline="True"/>
                                                                                         <assign variable="blockch2" expression="2"/>
                                                                                         <assign variable="blockatk2" expression="2"/>
                                                                                         <assign variable="gp1y" expression="0"/>
@@ -853,13 +853,13 @@
                                                     <then>
                                                         <if expression="gp2y&gt;5 || gp2y==0">
                                                             <then>
-                                                                <output expression="&quot;Gousma 4 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <output expression="&quot;Gousma Leopondo est&#225; fora de jogo!&quot;" newline="True"/>
                                                                 <assign variable="blockch4" expression="4"/>
                                                                 <assign variable="blockatk4" expression="4"/>
                                                                 <assign variable="gp2y" expression="0"/>
                                                                 <if expression="gp2x&gt;5 || gp2x==0">
                                                                     <then>
-                                                                        <output expression="&quot;Gousma 3 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        <output expression="&quot;Gousma Pelucio est&#225; fora de jogo!&quot;" newline="True"/>
                                                                         <assign variable="blockch3" expression="3"/>
                                                                         <assign variable="blockatk3" expression="3"/>
                                                                         <assign variable="gp2x" expression="0"/>
@@ -878,7 +878,7 @@
                                                                         <if expression="option==1">
                                                                             <then>
                                                                                 <do expression="option&gt;gp2x || option&lt;1">
-                                                                                    <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 3: &quot; &amp; gp2x" newline="True"/>
+                                                                                    <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma Pelucio: &quot; &amp; gp2x" newline="True"/>
                                                                                     <input variable="option"/>
                                                                                     <if expression="option&gt;gp2x || option&lt;1">
                                                                                         <then>
@@ -891,12 +891,12 @@
                                                                                 <assign variable="gp2y" expression="gp2y+option"/>
                                                                                 <if expression="gp2y&gt;0">
                                                                                     <then>
-                                                                                        <output expression="&quot;A Gousma 4 voltou para a batalha!&quot;" newline="True"/>
+                                                                                        <output expression="&quot;A Gousma Leopondo voltou para a batalha!&quot;" newline="True"/>
                                                                                         <assign variable="blockch4" expression="10"/>
                                                                                         <assign variable="blockatk4" expression="10"/>
                                                                                         <if expression="gp2x&lt;=0">
                                                                                             <then>
-                                                                                                <output expression="&quot;A Gousma 3 se sacrificou!&quot;" newline="True"/>
+                                                                                                <output expression="&quot;A Gousma Pelucio se sacrificou!&quot;" newline="True"/>
                                                                                                 <assign variable="blockch3" expression="3"/>
                                                                                                 <assign variable="blockatk3" expression="3"/>
                                                                                                 <assign variable="gp2x" expression="0"/>
@@ -913,12 +913,12 @@
                                                                 </if>
                                                             </then>
                                                             <else>
-                                                                <output expression="&quot;Gousma 3 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <output expression="&quot;Gousma Pelucio est&#225; fora de jogo!&quot;" newline="True"/>
                                                                 <assign variable="blockch3" expression="3"/>
                                                                 <assign variable="blockatk3" expression="3"/>
                                                                 <assign variable="gp2x" expression="0"/>
                                                                 <do expression="option&lt;0 || option&gt;1">
-                                                                    <output expression="&quot;jogador 2, sua Gousma 3 est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma 4 com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
+                                                                    <output expression="&quot;jogador 2, sua Gousma Pelucio est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma Leopondo com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
                                                                     <input variable="option"/>
                                                                     <if expression="option&lt;0 || option&gt;1">
                                                                         <then>
@@ -930,7 +930,7 @@
                                                                 <if expression="option==1">
                                                                     <then>
                                                                         <do expression="option&gt;gp2y || option&lt;1">
-                                                                            <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 4: &quot; &amp; gp2y" newline="True"/>
+                                                                            <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma Leopondo: &quot; &amp; gp2y" newline="True"/>
                                                                             <input variable="option"/>
                                                                             <if expression="option&gt;gp2y || option&lt;1">
                                                                                 <then>
@@ -943,12 +943,12 @@
                                                                         <assign variable="gp2x" expression="gp2x+option"/>
                                                                         <if expression="gp2x&gt;0">
                                                                             <then>
-                                                                                <output expression="&quot;A Gousma 3 voltou para a batalha!&quot;" newline="True"/>
+                                                                                <output expression="&quot;A Gousma Pelucio voltou para a batalha!&quot;" newline="True"/>
                                                                                 <assign variable="blockch3" expression="10"/>
                                                                                 <assign variable="blockatk3" expression="10"/>
                                                                                 <if expression="gp2y&lt;=0">
                                                                                     <then>
-                                                                                        <output expression="&quot;A Gousma 4 se sacrificou!&quot;" newline="True"/>
+                                                                                        <output expression="&quot;A Gousma Leopondo se sacrificou!&quot;" newline="True"/>
                                                                                         <assign variable="blockch4" expression="4"/>
                                                                                         <assign variable="blockatk4" expression="4"/>
                                                                                         <assign variable="gp2y" expression="0"/>

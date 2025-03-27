@@ -4,44 +4,38 @@
         <attribute name="name" value="projet&#227;o"/>
         <attribute name="authors" value="luan"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-03-06 08:52:51 "/>
+        <attribute name="saved" value="2025-03-26 10:41:13 "/>
         <attribute name="created" value="bHVhbjtERVNLVE9QLUNNQ0tSRDE7MjAyNS0wMy0wMTsiMTA6NDU6MzggIjsyNjg5"/>
         <attribute name="edited" value="bHVhbjtERVNLVE9QLUNNQ0tSRDE7MjAyNS0wMy0wMzsiMDY6MjE6NDEgIjszMTsyODQz"/>
-        <attribute name="edited" value="THVhbjtERVNLVE9QLTJMQVJWMVI7MjAyNS0wMy0wNjsiMDg6NTI6NTEgIjszOzI3Nzc="/>
+        <attribute name="edited" value="THVhbjtERVNLVE9QLTJMQVJWMVI7MjAyNS0wMy0wNjsiMDc6NTc6MzggIjs1OzI3ODg="/>
+        <attribute name="edited" value="THVhbjtMVUhTLVBDOzIwMjUtMDMtMTY7IjA5OjExOjIzICI7ODsyMjEz"/>
+        <attribute name="edited" value="bHVhbno7TFVIUy1QQzsyMDI1LTAzLTI2OyIxMDo0MToxMyAiOzE1OzI0MDg="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="escolhamenu" type="Integer" array="False" size=""/>
-            <declare name="option, pontuacao" type="Integer" array="False" size=""/>
-            <output expression="&quot;As escolhas importam&quot;" newline="True"/>
+            <declare name="option, option1, pontuacao, escolhamenu, caixaco, caixabo, jogador, jogador2, segredo1, segredo2, segredo3, alternar1" type="Integer" array="False" size=""/>
+            <declare name="parada, nome, nome1, alternar" type="String" array="False" size=""/>
             <output expression="&quot;Escolha o n&#250;mero correspondente para acessar a op&#231;&#227;o&quot;" newline="True"/>
             <do expression="option==0">
-                <do expression="escolhamenu==0">
+                <do expression="escolhamenu&lt;1 || escolhamenu&gt;4">
+                    <comment text="Escolha da op&#231;&#227;o do menu"/>
                     <assign variable="escolhamenu" expression="0"/>
-                    <output expression="&quot;              (1) - Perguntas e respostas&quot; &amp; ToChar(13)&amp;&#13;&#10;&quot;(2) - Acerte a caixa&quot; &amp; ToChar(13) &amp; &#13;&#10;&quot;(3) - Gousmas war&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot; (4) - Sair do (titulo)&quot;" newline="True"/>
+                    <output expression="&quot;----ONDE AS ESCOLHAS IMPORTAM----&quot;" newline="True"/>
+                    <output expression="&quot;(1) - Perguntas e respostas&quot; &amp; ToChar(13)&amp;&#13;&#10;&quot;(2) - Caixa na Cobra (2 jogadores)&quot; &amp; ToChar(13) &amp; &#13;&#10;&quot;(3) - Gousmas war (2 jogadores)&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(4) - Sair de Onde As Escolhas Importam&quot;" newline="True"/>
                     <input variable="escolhamenu"/>
                     <if expression="escolhamenu==1">
-                        <then>
-                            <assign variable="escolhamenu" expression="1"/>
-                        </then>
+                        <then/>
                         <else>
                             <if expression="escolhamenu==2">
-                                <then>
-                                    <assign variable="escolhamenu" expression="2"/>
-                                </then>
+                                <then/>
                                 <else>
                                     <if expression="escolhamenu==3">
-                                        <then>
-                                            <assign variable="escolhamenu" expression="3"/>
-                                        </then>
+                                        <then/>
                                         <else>
                                             <if expression="escolhamenu==4">
-                                                <then>
-                                                    <assign variable="escolhamenu" expression="4"/>
-                                                </then>
+                                                <then/>
                                                 <else>
-                                                    <assign variable="escolhamenu" expression="0"/>
                                                     <output expression="&quot;Op&#231;&#227;o escolhida n&#227;o existente, por favor, esolha uma das op&#231;&#245;es&quot;" newline="True"/>
                                                 </else>
                                             </if>
@@ -51,14 +45,16 @@
                             </if>
                         </else>
                     </if>
+                    <comment text="Delimita&#231;&#227;o de 1 a 4"/>
                 </do>
+                <comment text="Caminha para o jogo j&#225; selecionado"/>
                 <if expression="escolhamenu==1">
                     <then>
-                        <assign variable="escolhamenu" expression="0"/>
+                        <comment text="Perguntas e respostas"/>
                         <output expression="&quot;Voc&#234; selecionou: Perguntas e Respostas!&quot;" newline="True"/>
-                        <output expression="&quot;Nesse jogo voc&#234; deve escolher as respostas certas, ao final ganhar&#225; uma avali&#231;&#227;o conforme seu desempenho.&quot;" newline="True"/>
                         <do expression="option==1">
                             <do expression="option&lt;1 || option&gt;5">
+                                <output expression="&quot;Nesse jogo voc&#234; deve escolher as respostas certas para, ao final ganhar&#225; uma avali&#231;&#227;o conforme seu desempenho.&quot;" newline="True"/>
                                 <output expression="&quot;1&#176;)Quanto &#233; 10x30?&quot;" newline="True"/>
                                 <output expression="&quot;(1) - 250&quot; &amp; ToChar(13) &amp;  &quot;(2) - 300&quot; &amp; ToChar(13) &amp; &quot;(3) - 900&quot; &amp; ToChar(13)&amp; &quot;(4) - 789&quot; &amp; ToChar(13) &amp; &quot;(5) - 167&quot;" newline="True"/>
                                 <input variable="option"/>
@@ -348,7 +344,7 @@
                             </if>
                             <output expression="&quot;Muito obrigado por jogar Perguntas e Respostas!&quot; &amp; ToChar(13) &amp; &quot;Selecione uma das op&#231;&#245;es abaixo&quot;" newline="True"/>
                             <do expression="option&lt;0 || option&gt;1">
-                                <output expression="&quot;(1) - Repetir o jogo&quot; &amp; ToChar(13) &amp; &quot;(0) - Voltar para o menu&quot;" newline="True"/>
+                                <output expression="&quot;(0) - Voltar para o menu&quot; &amp; ToChar(13) &amp; &quot;(1) - Repetir o jogo&quot;" newline="True"/>
                                 <input variable="option"/>
                                 <if expression="option&lt;0 || option&gt;1">
                                     <then>
@@ -358,22 +354,674 @@
                                 </if>
                             </do>
                         </do>
-                        <assign variable="option" expression="0"/>
                     </then>
                     <else>
                         <if expression="escolhamenu==2">
                             <then>
-                                <assign variable="escolhamenu" expression="0"/>
-                                <do expression="escolhamenu==1"/>
+                                <output expression="&quot;Voc&#234; selecionou: Cobra na Caixa!&quot;" newline="True"/>
+                                <do expression="option==1">
+                                    <comment text="cobra na caixa"/>
+                                    <assign variable="option" expression="0"/>
+                                    <output expression="&quot;Dois ambiciosos exploradores, em meio as grandes tumbas eg&#237;pcias, perderam a esperan&#231;a de voltarem juntos dessa jornada. Ao entrarem em uma sala e derrepente as grandes portas se fecharem, se deparam com cinco caixas.&quot;" newline="True"/>
+                                    <output expression="&quot;Esse jogo deve ser jogado por dois jogadores. Haver&#225; cinco caixas disponiveis, dentre as caixa existentes, uma ter&#225; um bot&#227;o o qual levar&#225; &#224; vit&#243;ria, outra ter&#225; uma cobra mortal a qual levar&#225; &#224; derrota e o restante das caixas estar&#227;o vazias e permitir&#227;o a continuidade do jogo, permitindo a escolha de outra caixa, cada jogador ter&#225; sua chance indicada pelo jogo e a cada rodada a posi&#231;&#227;o das caixas ser&#227;o trocadas de lugar. Divirtam-se!&quot;" newline="True"/>
+                                    <output expression="&quot;Aperte 'Enter' para continuar!&quot;" newline="True"/>
+                                    <input variable="parada"/>
+                                    <output expression="&quot;A ordem dos jogadores ser&#225; escolhida aleatoriamente&quot;" newline="True"/>
+                                    <assign variable="jogador" expression="random(2)"/>
+                                    <if expression="jogador==0">
+                                        <then>
+                                            <output expression="&quot;O jogador 1 iniciar&#225;&quot;" newline="True"/>
+                                            <assign variable="Jogador" expression="1"/>
+                                            <assign variable="jogador2" expression="2"/>
+                                            <assign variable="alternar1" expression="jogador"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;O jogador 2 iniciar&#225;&quot;" newline="True"/>
+                                            <assign variable="jogador" expression="2"/>
+                                            <assign variable="jogador2" expression="1"/>
+                                            <assign variable="alternar1" expression="jogador"/>
+                                        </else>
+                                    </if>
+                                    <output expression="&quot;Jogador &quot; &amp; jogador &amp; &quot;, escolha o nome do seu explorador!&quot;" newline="True"/>
+                                    <do expression="option&lt;1 || option&gt;5">
+                                        <output expression="&quot;(1) - David&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(2) - Lu&#237;s&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(3) - Allan&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(4) - Jorge&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(5) - lawrence&quot;" newline="True"/>
+                                        <input variable="option"/>
+                                        <if expression="option&lt;1 || option&gt;5">
+                                            <then>
+                                                <output expression="&quot;Aten&#231;&#227;o! escoha uma das op&#231;&#245;es correspondentes&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="option==1">
+                                                    <then>
+                                                        <assign variable="nome" expression="&quot;David&quot;"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="option==2">
+                                                            <then>
+                                                                <assign variable="nome" expression="&quot;Lu&#237;s&quot;"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="option==3">
+                                                                    <then>
+                                                                        <assign variable="nome" expression="&quot;Allan&quot;"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="option==4">
+                                                                            <then>
+                                                                                <assign variable="nome" expression="&quot;Jorge&quot;"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <assign variable="nome" expression="&quot;Lawrence&quot;"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                        <assign variable="alternar" expression="nome"/>
+                                    </do>
+                                    <output expression="&quot;Jogador &quot; &amp; jogador2 &amp; &quot;, escolha o nome do seu explorador!&quot;" newline="True"/>
+                                    <do expression="option&lt;1 || option&gt;5 || option1==option">
+                                        <output expression="&quot;(1) - David&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(2) - Lu&#237;s&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(3) - Allan&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(4) - Jorge&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;(5) - Lawrence&quot;" newline="True"/>
+                                        <input variable="option1"/>
+                                        <if expression="option&lt;1 || option&gt;5">
+                                            <then>
+                                                <output expression="&quot;Aten&#231;&#227;o! escoha uma das op&#231;&#245;es correspondentes&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="option1==option">
+                                                    <then>
+                                                        <output expression="&quot;Escolha uma op&#231;&#227;o diferente do outro jogador!&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="option1==1">
+                                                            <then>
+                                                                <assign variable="nome1" expression="&quot;David&quot;"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="option1==2">
+                                                                    <then>
+                                                                        <assign variable="nome1" expression="&quot;Lu&#237;s&quot;"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="option1==3">
+                                                                            <then>
+                                                                                <assign variable="nome1" expression="&quot;Allan&quot;"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <if expression="option1==4">
+                                                                                    <then>
+                                                                                        <assign variable="nome1" expression="&quot;Jorge&quot;"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <assign variable="nome1" expression="&quot;Lawrence&quot;"/>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </do>
+                                    <output expression="&quot;As cinco caixas aparencem na frente dos dois exploradores!&quot;" newline="True"/>
+                                    <do expression="option==0">
+                                        <do expression="caixaco==caixabo">
+                                            <assign variable="caixaco" expression="random(5)+1"/>
+                                            <assign variable="caixabo" expression="random(5)+1"/>
+                                        </do>
+                                        <do expression="option&lt;1 || option&gt;5">
+                                            <output expression="alternar &amp; &quot; (Jogador &quot; &amp; alternar1 &amp; &quot;) selecione uma caixa&quot;" newline="True"/>
+                                            <output expression="&quot;(1) - Primeira caixa&quot; &amp; ToChar(13)" newline="False"/>
+                                            <output expression="&quot;(2) - Segunda caixa&quot; &amp; ToChar(13)" newline="False"/>
+                                            <output expression="&quot;(3) - Terceira caixa&quot; &amp; ToChar(13)" newline="False"/>
+                                            <output expression="&quot;(4) - Quarta caixa&quot; &amp; ToChar(13)" newline="False"/>
+                                            <output expression="&quot;(5) - Quinta caixa&quot;" newline="True"/>
+                                            <input variable="option"/>
+                                            <if expression="option&lt;1 || option&gt;5">
+                                                <then>
+                                                    <output expression="&quot;Escolha apenas um n&#250;mero correspondente&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </do>
+                                        <if expression="option==caixaco">
+                                            <then>
+                                                <output expression="&quot;Voc&#234; abre a caixa lentamente, seu instinto parece avisar que tem algo errado, voc&#234; deveria escutar a si pr&#243;prio.&quot; &amp; ToChar(13) &amp; &quot;Uma cobra derrepente ataca o explorador de maneira agressiva, sem chance de defesa, mordida atr&#225;s de mordida, voc&#234;, aos poucos, sabendo que n&#227;o voltar&#225; para casa, perde a conci&#234;ncia e cai morto no ch&#227;o &#225;rido.&quot;" newline="True"/>
+                                                <assign variable="option" expression="2"/>
+                                            </then>
+                                            <else>
+                                                <if expression="option==caixabo">
+                                                    <then>
+                                                        <output expression="&quot;Suando, o explorador abre a caixa lentamente, voc&#234; escolheu a caixa certa? voc&#234; vai morrer? as perguntas parecem gritar em seus ouvidos.&quot; &amp; ToChar(13) &amp; &quot;Por um segundo tudo parece ficar em um clompleto silencio, as m&#227;os tremulas derrepente acalmam-se, voc&#234; v&#234; um bot&#227;o no fundo da caixa apertando-o e agora calmo sabendo que poder&#225; v&#234; outro nascer do sol.&quot;" newline="True"/>
+                                                        <assign variable="option" expression="1"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Olhando com os olhos tremulos para o outro explorador, voc&#234; abre a caixa com o cora&#231;&#227;o pesado, sem saber o que vai acontecer, mas reza para que tenha um bot&#227;o dentro da caixa, quando a caixa abre, voc&#234; v&#234; apenas areia, a caixa est&#225; vazia, o pesadelo continua.&quot;" newline="True"/>
+                                                        <assign variable="option" expression="0"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                        <if expression="option==0">
+                                            <then>
+                                                <if expression="alternar1==jogador">
+                                                    <then>
+                                                        <assign variable="alternar1" expression="jogador2"/>
+                                                        <assign variable="alternar" expression="nome1"/>
+                                                    </then>
+                                                    <else>
+                                                        <assign variable="alternar1" expression="jogador"/>
+                                                        <assign variable="alternar" expression="nome"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="option==1">
+                                                    <then>
+                                                        <output expression="alternar &amp; &quot; (jogador &quot; &amp; alternar1 &amp; &quot;) Venceu o jogo&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="alternar1==jogador">
+                                                            <then>
+                                                                <assign variable="alternar1" expression="jogador2"/>
+                                                                <assign variable="alternar" expression="nome1"/>
+                                                            </then>
+                                                            <else>
+                                                                <assign variable="alternar1" expression="jogador"/>
+                                                                <assign variable="alternar" expression="nome"/>
+                                                            </else>
+                                                        </if>
+                                                        <output expression="alternar &amp; &quot; (jogador &quot; &amp; alternar1 &amp; &quot;) Venceu o jogo&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </do>
+                                    <do expression="option&lt;0 || option&gt;1">
+                                        <output expression="&quot;Obrigado por jogar Cobra na Caixa!&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Escolha uma das op&#231;&#245;es&quot; &amp; ToChar(13) &amp; &quot;(0) - Voltar ao menu&quot; &amp; ToChar(13) &amp; &quot;(1) - Repetir o jogo&quot;" newline="True"/>
+                                        <input variable="option"/>
+                                        <if expression="option&lt;0 || option&gt;1">
+                                            <then>
+                                                <output expression="&quot;Escolha apenas umas das op&#231;&#245;es correspondentes&quot;" newline="True"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </do>
+                                </do>
+                                <assign variable="segredo2" expression="1"/>
                             </then>
                             <else>
                                 <if expression="escolhamenu==3">
                                     <then>
-                                        <assign variable="escolhamenu" expression="0"/>
-                                        <do expression="escolhamenu==1"/>
+                                        <output expression="&quot;Voc&#234; selecionou: Gousmas War!&quot;" newline="True"/>
+                                        <comment text="gousmas war"/>
+                                        <declare name="gp1x, gp1y, gp2x, gp2y, blockch, blockatk, blockch2, blockatk2, blockch3, blockatk3, blockch4, blockatk4" type="Integer" array="False" size=""/>
+                                        <do expression="option==1">
+                                            <output expression="&quot;H&#225; muitos anos, a guerra entre as Gousmas come&#231;ou e desde ent&#227;o nunca mais terminou. As Gousmas se encontram em um conflito quase intermin&#225;vel, por&#233;m, toda guerra tem um fim, as &#250;ltimas Gousmas se encontram em um cen&#225;rio ca&#243;tico, em meio as trincheiras, o lado vitorioso ser&#225; escolhido agora!&quot;" newline="True"/>
+                                            <output expression="&quot;Como jogar: Esse jogo &#233; feito para ser jogado por dois jogadores, nele, cada jogador ter&#225; que controlar duas Gousmas, escolhendo qual delas ir&#225; usar e qual Gousma inimiga atacar&#225;.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Todas as Gousmas come&#231;am com 1 de f&#250;ria, a f&#250;ria &#233; o poder de ataque que a Gousma tem, a Gousma atacada ir&#225; somar ao seu n&#237;vel de f&#250;ria o valor do poder de ataque da Gousma atacante, as Gousmas que obterem um valor de f&#250;ria maior que cinco, ir&#227;o estar fora de jogo at&#233; que o dono dela decida dividir o valor de f&#250;ria da outra Gousma com a Gousma fora de jogo, o jogo acaba quando algum dos jogadores n&#227;o tiverem mais Gousmas.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Melhor jeito de aprender &#233; se envolver!&quot; &amp; ToChar(13) &amp; &quot;Bom Jogo!&quot;" newline="True"/>
+                                            <output expression="&quot;Aperte 'Enter' para continuar!&quot;" newline="True"/>
+                                            <input variable="parada"/>
+                                            <output expression="&quot;A ordem dos jogadores ser&#225; escolhida aleatoriamente&quot;" newline="True"/>
+                                            <assign variable="jogador" expression="random(2)"/>
+                                            <if expression="jogador==0">
+                                                <then>
+                                                    <output expression="&quot;O jogador 1 iniciar&#225;&quot;" newline="True"/>
+                                                    <assign variable="Jogador" expression="1"/>
+                                                    <assign variable="jogador2" expression="2"/>
+                                                    <assign variable="alternar1" expression="jogador"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;O jogador 2 iniciar&#225;&quot;" newline="True"/>
+                                                    <assign variable="jogador" expression="2"/>
+                                                    <assign variable="jogador2" expression="1"/>
+                                                    <assign variable="alternar1" expression="jogador"/>
+                                                </else>
+                                            </if>
+                                            <assign variable="gp1x" expression="1"/>
+                                            <assign variable="gp1y" expression="1"/>
+                                            <assign variable="gp2x" expression="1"/>
+                                            <assign variable="gp2y" expression="1"/>
+                                            <assign variable="blockch" expression="0"/>
+                                            <assign variable="blockatk" expression="0"/>
+                                            <assign variable="blockch2" expression="0"/>
+                                            <assign variable="blockatk2" expression="0"/>
+                                            <assign variable="blockch3" expression="0"/>
+                                            <assign variable="blockatk3" expression="0"/>
+                                            <assign variable="blockch4" expression="0"/>
+                                            <assign variable="blockatk4" expression="0"/>
+                                            <do expression="option==1">
+                                                <output expression="&quot;N&#205;VEIS DE FURIA&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Gousma 1: &quot; &amp; gp1x &amp; ToChar(13) &amp; &quot;Gousma 2: &quot; &amp; gp1y &amp; ToChar(13) &amp; &quot;Gousma 3: &quot; &amp; gp2x &amp; ToChar(13) &amp; &quot;Gousma 4: &quot; &amp; gp2y" newline="True"/>
+                                                <if expression="alternar1==1">
+                                                    <then>
+                                                        <do expression="option&lt;1 || option&gt;2 || option==blockch || option==blockch2">
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja USAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(1) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(2) - Gousma y&quot;" newline="True"/>
+                                                            <input variable="option"/>
+                                                            <if expression="option&lt;1 || option&gt;2 || option==blockch || option==blockch2">
+                                                                <then>
+                                                                    <if expression="option==blockch || option==blockch2">
+                                                                        <then>
+                                                                            <output expression="&quot;Op&#231;&#227;o bloqueada, a gousma escolhida est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </do>
+                                                    </then>
+                                                    <else>
+                                                        <do expression="option&lt;3 || option&gt;4 || option==blockch3 || option==blockch4">
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja USAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(3) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(4) - Gousma y&quot;" newline="True"/>
+                                                            <input variable="option"/>
+                                                            <if expression="option&lt;3 || option&gt;4 || option==blockch3 || option==blockch4">
+                                                                <then>
+                                                                    <if expression="option==blockch3 || option==blockch4">
+                                                                        <then>
+                                                                            <output expression="&quot;Op&#231;&#227;o bloqueada, a gousma escolhida est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </do>
+                                                    </else>
+                                                </if>
+                                                <if expression="alternar1==1">
+                                                    <then>
+                                                        <do expression="option1&lt;3 || option1&gt;4 || option1==blockatk3 || option1==blockatk4">
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja ATACAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(3) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(4) - Gousma y&quot;" newline="True"/>
+                                                            <input variable="option1"/>
+                                                            <if expression="option1&lt;3 || option1&gt;4 || option1==blockatk3 || option1==blockatk4">
+                                                                <then>
+                                                                    <if expression="option1==blockatk3 || option1==blockatk4">
+                                                                        <then>
+                                                                            <output expression="&quot;Op&#231;&#227;o bloqueada, a gousma escolhida est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </do>
+                                                    </then>
+                                                    <else>
+                                                        <do expression="option1&lt;1 || option1&gt;2 || option1==blockatk || option1==blockatk2">
+                                                            <output expression="&quot;(Jogador &quot; &amp; alternar1 &amp; &quot;) Selecione qual Gousma deseja ATACAR.&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(1) - Gousma x&quot; &amp; ToChar(13) &amp; &quot;(2) - Gousma y&quot;" newline="True"/>
+                                                            <input variable="option1"/>
+                                                            <if expression="option1&lt;1 || option1&gt;2 || option1==blockatk || option1==blockatk2">
+                                                                <then>
+                                                                    <if expression="option1==blockatk || option1==blockatk2">
+                                                                        <then>
+                                                                            <output expression="&quot;Op&#231;&#227;o bloqueada, a gousma escolhida est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </do>
+                                                    </else>
+                                                </if>
+                                                <if expression="alternar1==1">
+                                                    <then>
+                                                        <comment text="calculos jogador 1"/>
+                                                        <if expression="option==1">
+                                                            <then>
+                                                                <if expression="option1==3">
+                                                                    <then>
+                                                                        <assign variable="gp2x" expression="gp2x+gp1x"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="gp2y" expression="gp2y+gp1x"/>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="option1==3">
+                                                                    <then>
+                                                                        <assign variable="gp2x" expression="gp2x+gp1y"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="gp2y" expression="gp2y+gp1y"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <comment text="calculos para jogador 2"/>
+                                                        <if expression="option==3">
+                                                            <then>
+                                                                <if expression="option1==1">
+                                                                    <then>
+                                                                        <assign variable="gp1x" expression="gp1x+gp2x"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="gp1y" expression="gp1y+gp2x"/>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="option1==1">
+                                                                    <then>
+                                                                        <assign variable="gp1x" expression="gp1x+gp2y"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="gp1y" expression="gp1y+gp2y"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                                <if expression="gp1x&gt;5 || gp1y&gt;5 || gp1x==0 || gp1y==0">
+                                                    <then>
+                                                        <if expression="gp1y&gt;5 || gp1y==0">
+                                                            <then>
+                                                                <output expression="&quot;Gousma 2 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <assign variable="blockch2" expression="2"/>
+                                                                <assign variable="blockatk2" expression="2"/>
+                                                                <assign variable="gp1y" expression="0"/>
+                                                                <if expression="gp1x&gt;5 || gp1x==0">
+                                                                    <then>
+                                                                        <output expression="&quot;Gousma 1 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        <assign variable="blockch" expression="1"/>
+                                                                        <assign variable="blockatk" expression="1"/>
+                                                                        <assign variable="gp1x" expression="0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <do expression="option&lt;0 || option&gt;1">
+                                                                            <output expression="&quot;jogador 1, sua Gousma 2 est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma 1 com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
+                                                                            <input variable="option"/>
+                                                                            <if expression="option&lt;0 || option&gt;1">
+                                                                                <then>
+                                                                                    <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else/>
+                                                                            </if>
+                                                                        </do>
+                                                                        <if expression="option==1">
+                                                                            <then>
+                                                                                <do expression="option&gt;gp1x || option&lt;1">
+                                                                                    <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 1: &quot; &amp; gp1x" newline="True"/>
+                                                                                    <input variable="option"/>
+                                                                                    <if expression="option&gt;gp1x || option&lt;1">
+                                                                                        <then>
+                                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                                        </then>
+                                                                                        <else/>
+                                                                                    </if>
+                                                                                </do>
+                                                                                <assign variable="gp1x" expression="gp1x-option"/>
+                                                                                <assign variable="gp1y" expression="gp1y+option"/>
+                                                                                <if expression="gp1y&gt;0">
+                                                                                    <then>
+                                                                                        <output expression="&quot;A Gousma 2 voltou para a batalha!&quot;" newline="True"/>
+                                                                                        <assign variable="blockch2" expression="10"/>
+                                                                                        <assign variable="blockatk2" expression="10"/>
+                                                                                        <if expression="gp1x&lt;=0">
+                                                                                            <then>
+                                                                                                <output expression="&quot;A Gousma 1 se sacrificou!&quot;" newline="True"/>
+                                                                                                <assign variable="blockch" expression="1"/>
+                                                                                                <assign variable="blockatk" expression="1"/>
+                                                                                                <assign variable="gp1x" expression="0"/>
+                                                                                            </then>
+                                                                                            <else/>
+                                                                                        </if>
+                                                                                    </then>
+                                                                                    <else/>
+                                                                                </if>
+                                                                            </then>
+                                                                            <else/>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;Gousma 1 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <assign variable="blockch" expression="1"/>
+                                                                <assign variable="blockatk" expression="1"/>
+                                                                <assign variable="gp1x" expression="0"/>
+                                                                <do expression="option&lt;0 || option&gt;1">
+                                                                    <output expression="&quot;jogador 1, sua Gousma 1 est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma 2 com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
+                                                                    <input variable="option"/>
+                                                                    <if expression="option&lt;0 || option&gt;1">
+                                                                        <then>
+                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </do>
+                                                                <if expression="option==1">
+                                                                    <then>
+                                                                        <do expression="option&gt;gp1y || option&lt;1">
+                                                                            <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 2: &quot; &amp; gp1y" newline="True"/>
+                                                                            <input variable="option"/>
+                                                                            <if expression="option&gt;gp1y || option&lt;1">
+                                                                                <then>
+                                                                                    <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else/>
+                                                                            </if>
+                                                                        </do>
+                                                                        <assign variable="gp1y" expression="gp1y-option"/>
+                                                                        <assign variable="gp1x" expression="gp1x+option"/>
+                                                                        <if expression="gp1x&gt;0">
+                                                                            <then>
+                                                                                <output expression="&quot;A Gousma 1 voltou para a batalha!&quot;" newline="True"/>
+                                                                                <assign variable="blockch" expression="10"/>
+                                                                                <assign variable="blockatk" expression="10"/>
+                                                                                <if expression="gp1y&lt;=0">
+                                                                                    <then>
+                                                                                        <output expression="&quot;A Gousma 2 se sacrificou!&quot;" newline="True"/>
+                                                                                        <assign variable="blockch2" expression="2"/>
+                                                                                        <assign variable="blockatk2" expression="2"/>
+                                                                                        <assign variable="gp1y" expression="0"/>
+                                                                                    </then>
+                                                                                    <else/>
+                                                                                </if>
+                                                                            </then>
+                                                                            <else/>
+                                                                        </if>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <if expression="gp2x&gt;5 || gp2y&gt;5 || gp2x==0 || gp2y==0">
+                                                    <then>
+                                                        <if expression="gp2y&gt;5 || gp2y==0">
+                                                            <then>
+                                                                <output expression="&quot;Gousma 4 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <assign variable="blockch4" expression="4"/>
+                                                                <assign variable="blockatk4" expression="4"/>
+                                                                <assign variable="gp2y" expression="0"/>
+                                                                <if expression="gp2x&gt;5 || gp2x==0">
+                                                                    <then>
+                                                                        <output expression="&quot;Gousma 3 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                        <assign variable="blockch3" expression="3"/>
+                                                                        <assign variable="blockatk3" expression="3"/>
+                                                                        <assign variable="gp2x" expression="0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <do expression="option&lt;0 || option&gt;1">
+                                                                            <output expression="&quot;jogador 2, sua Gousma 4 est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma 3 com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
+                                                                            <input variable="option"/>
+                                                                            <if expression="option&lt;0 || option&gt;1">
+                                                                                <then>
+                                                                                    <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else/>
+                                                                            </if>
+                                                                        </do>
+                                                                        <if expression="option==1">
+                                                                            <then>
+                                                                                <do expression="option&gt;gp2x || option&lt;1">
+                                                                                    <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 3: &quot; &amp; gp2x" newline="True"/>
+                                                                                    <input variable="option"/>
+                                                                                    <if expression="option&gt;gp2x || option&lt;1">
+                                                                                        <then>
+                                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                                        </then>
+                                                                                        <else/>
+                                                                                    </if>
+                                                                                </do>
+                                                                                <assign variable="gp2x" expression="gp2x-option"/>
+                                                                                <assign variable="gp2y" expression="gp2y+option"/>
+                                                                                <if expression="gp2y&gt;0">
+                                                                                    <then>
+                                                                                        <output expression="&quot;A Gousma 4 voltou para a batalha!&quot;" newline="True"/>
+                                                                                        <assign variable="blockch4" expression="10"/>
+                                                                                        <assign variable="blockatk4" expression="10"/>
+                                                                                        <if expression="gp2x&lt;=0">
+                                                                                            <then>
+                                                                                                <output expression="&quot;A Gousma 3 se sacrificou!&quot;" newline="True"/>
+                                                                                                <assign variable="blockch3" expression="3"/>
+                                                                                                <assign variable="blockatk3" expression="3"/>
+                                                                                                <assign variable="gp2x" expression="0"/>
+                                                                                            </then>
+                                                                                            <else/>
+                                                                                        </if>
+                                                                                    </then>
+                                                                                    <else/>
+                                                                                </if>
+                                                                            </then>
+                                                                            <else/>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;Gousma 3 est&#225; fora de jogo!&quot;" newline="True"/>
+                                                                <assign variable="blockch3" expression="3"/>
+                                                                <assign variable="blockatk3" expression="3"/>
+                                                                <assign variable="gp2x" expression="0"/>
+                                                                <do expression="option&lt;0 || option&gt;1">
+                                                                    <output expression="&quot;jogador 2, sua Gousma 3 est&#225; fora de jogo, deseja dividir o valor de f&#250;ria da Gousma 4 com ela?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;(0) - N&#227;o&quot; &amp; ToChar(13) &amp; &quot;(1) - Sim&quot;" newline="True"/>
+                                                                    <input variable="option"/>
+                                                                    <if expression="option&lt;0 || option&gt;1">
+                                                                        <then>
+                                                                            <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </do>
+                                                                <if expression="option==1">
+                                                                    <then>
+                                                                        <do expression="option&gt;gp2y || option&lt;1">
+                                                                            <output expression="&quot;Quanto voc&#234; deseja dividir?&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;N&#237;vel de f&#250;ria da Gousma 4: &quot; &amp; gp2y" newline="True"/>
+                                                                            <input variable="option"/>
+                                                                            <if expression="option&gt;gp2y || option&lt;1">
+                                                                                <then>
+                                                                                    <output expression="&quot;Escolha apenas uma das op&#231;&#245;es poss&#237;veis!&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else/>
+                                                                            </if>
+                                                                        </do>
+                                                                        <assign variable="gp2y" expression="gp2y-option"/>
+                                                                        <assign variable="gp2x" expression="gp2x+option"/>
+                                                                        <if expression="gp2x&gt;0">
+                                                                            <then>
+                                                                                <output expression="&quot;A Gousma 3 voltou para a batalha!&quot;" newline="True"/>
+                                                                                <assign variable="blockch3" expression="10"/>
+                                                                                <assign variable="blockatk3" expression="10"/>
+                                                                                <if expression="gp2y&lt;=0">
+                                                                                    <then>
+                                                                                        <output expression="&quot;A Gousma 4 se sacrificou!&quot;" newline="True"/>
+                                                                                        <assign variable="blockch4" expression="4"/>
+                                                                                        <assign variable="blockatk4" expression="4"/>
+                                                                                        <assign variable="gp2y" expression="0"/>
+                                                                                    </then>
+                                                                                    <else/>
+                                                                                </if>
+                                                                            </then>
+                                                                            <else/>
+                                                                        </if>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <if expression="jogador==1">
+                                                    <then>
+                                                        <if expression="alternar1==1">
+                                                            <then>
+                                                                <assign variable="alternar1" expression="jogador2"/>
+                                                            </then>
+                                                            <else>
+                                                                <assign variable="alternar1" expression="jogador"/>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="alternar1==1">
+                                                            <then>
+                                                                <assign variable="alternar1" expression="jogador"/>
+                                                            </then>
+                                                            <else>
+                                                                <assign variable="alternar1" expression="jogador2"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                                <if expression="gp1x==0 &amp;&amp; gp1y==0">
+                                                    <then>
+                                                        <assign variable="option" expression="0"/>
+                                                        <output expression="&quot;Jogador 2 ganhou!&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="gp2x==0 &amp;&amp; gp2y==0">
+                                                            <then>
+                                                                <assign variable="option" expression="0"/>
+                                                                <output expression="&quot;Jogador 1 ganhou!&quot;" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <assign variable="option" expression="1"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </do>
+                                            <do expression="option&lt;0 || option&gt;1">
+                                                <output expression="&quot;Obrigado por jogar Gousmas War&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Escolha uma das op&#231;&#245;es&quot; &amp; ToChar(13) &amp; &quot;(0) - Voltar ao menu&quot; &amp; ToChar(13) &amp; &quot;(1) - Repetir o jogo&quot;" newline="True"/>
+                                                <input variable="option"/>
+                                                <if expression="option&lt;0 || option&gt;1">
+                                                    <then>
+                                                        <output expression="&quot;Escolha apenas umas das op&#231;&#245;es correspondentes&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </do>
+                                        </do>
                                     </then>
                                     <else>
-                                        <output expression="&quot;Obrigado por jogar&quot;" newline="True"/>
+                                        <comment text="Encerrar o programa"/>
+                                        <output expression="&quot;Obrigado por jogar!&quot;" newline="True"/>
+                                        <assign variable="option" expression="1"/>
                                     </else>
                                 </if>
                             </else>
